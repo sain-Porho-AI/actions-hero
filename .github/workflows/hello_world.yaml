@@ -23,4 +23,4 @@ jobs:
         steps:
             - name: goodbye world
               run:  print("Goodbye world")
-              shell: ipython
+              shell: python
