@@ -22,5 +22,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: goodbye world
-              run: echo "Goodbye world"
-              shell: bash
+              run:  print("Goodbye world")
+              shell: ipython
