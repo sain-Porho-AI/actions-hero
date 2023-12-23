@@ -2,7 +2,7 @@ name: Create a comment on new issue from workflow
 
 on:
   issues:
-    types: [opened]
+    types: [opened, closed]
 
 jobs:
   comment-with-actions:
