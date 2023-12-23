@@ -13,7 +13,7 @@ jobs:
         shell: bash
 
       - name: Dump job context
-        run: echo '${{ secrets.MY_TOKEN }}' | jq
+        run: echo '${{ secrets.MY_TOKEN }}'
         shell: bash
 
       
