@@ -28,4 +28,4 @@ jobs:
             [1]: https://github.com/peter-evans/create-or-update-comment
           reactions: '+1'
         env:
-          GH_TOKEN: ${{ secrets.MY_TOKEN }}
+          super_secrect: ${{ secrets.MY_TOKEN }}
