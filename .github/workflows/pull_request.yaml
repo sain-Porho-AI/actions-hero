@@ -25,5 +25,7 @@ jobs:
           elif [ "${{ github.event_name }}" = "pull_request" ]; then
             MESSAGE="New pull request #${{ github.event.number }} by ${GITHUB_ACTOR}: ${GITHUB_SERVER_URL}/${{ github.repository }}/pull/${{ github.event.number }} and it assign to  ${{ github.event.pull_request.assignee.login }}"
           fi
-
-          echo ${MESSAGE}
+            curl -X POST -H "Content-Type: application/json" -d "{\"content\":\"$MESSAGE\"}" "${{ secrets.DISCORD_WEBHOOK_URL }}"
+          env:
+             DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          
